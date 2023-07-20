@@ -1,4 +1,4 @@
-# Optimization-Project
+## Optimization-Project
 
 Assigning engineering students to DTC project teams.
 
