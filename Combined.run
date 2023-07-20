@@ -1,0 +1,26 @@
+# This runfile solves the assigning of engineering students to
+# DTC project teams - Phase 2 combined
+#
+# Group: Jessie Lanin, Victor Agaba, Emily Wei
+
+reset;
+
+# Start the log file
+option log_file Combined.log;
+
+# Load the model
+model Combined.mod;
+data Combined.dat;
+let happiness := 300;
+
+# Choose solver and solve
+option solver cplex;
+solve;
+
+# Display optimal solution 
+display s;
+display ConflictofInterest;
+
+# Stop the log_file
+option log_file '';
+close;

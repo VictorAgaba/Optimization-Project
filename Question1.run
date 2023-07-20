@@ -1,0 +1,25 @@
+# This runfile solves the assigning engineering students to
+# DTC project teams question 1
+#
+# Group: Jessie Lanin, Victor Agaba, Emily Wei
+
+reset;
+
+# Start the log file
+option log_file Question1.log;
+
+# Load the model
+model Question1.mod;
+data Question1.dat;
+
+# Choose solver and solve
+option solver cplex;
+solve;
+
+# Display optimal solution 
+display s;
+display gender_proportion;
+
+# Stop the log_file
+option log_file '';
+close;
